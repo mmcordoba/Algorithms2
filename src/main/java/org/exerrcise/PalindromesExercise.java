@@ -42,9 +42,9 @@ public class PalindromesExercise {
 
                     boolean isOdd = (actualCount % 2) != 0;
                     // if there is an odd and size is not odd then palindrome is not possible;
-                    noPossible = oddLenghtCanNotHaveOddLetter(asArray, noPossible, isOdd);
+                    noPossible = oddLenghtCanNotHaveOddLetter(asArray, isOdd);
                     // if there are more than one odd the palindrome is not possible
-                    noPossible = noMoreThanOneOddLetter(containsOdd, noPossible, isOdd);
+                    noPossible = noMoreThanOneOddLetter(containsOdd, isOdd);
 
                     if (noPossible) {
                         break;
@@ -68,9 +68,9 @@ public class PalindromesExercise {
                     boolean isOdd = (actualCount % 2) != 0;
 
                     // if there is an odd and size is not odd then palindrome is not possible;
-                    noPossible = oddLenghtCanNotHaveOddLetter(asArray, noPossible, isOdd);
+                    noPossible = oddLenghtCanNotHaveOddLetter(asArray, isOdd);
                     // if there are more than one odd the palindrome is not possible
-                    noPossible = noMoreThanOneOddLetter(containsOdd, noPossible, isOdd);
+                    noPossible = noMoreThanOneOddLetter(containsOdd, isOdd);
                     if (noPossible) {
                         break;
                     }
@@ -125,16 +125,12 @@ public class PalindromesExercise {
         return palindrome;
     }
 
-    private boolean noMoreThanOneOddLetter(boolean containsOdd, boolean noPossible, boolean isOdd) {
-        if (isOdd && containsOdd) {
-            noPossible = true;
-        }
-        return noPossible;
+    private boolean noMoreThanOneOddLetter(boolean containsOdd, boolean isOdd) {
+        return isOdd && containsOdd;
     }
 
-    private boolean oddLenghtCanNotHaveOddLetter(char[] asArray, boolean noPossible, boolean isOdd) {
-        noPossible = noMoreThanOneOddLetter(isOdd, noPossible, ((asArray.length % 2) == 0));
-        return noPossible;
+    private boolean oddLenghtCanNotHaveOddLetter(char[] asArray, boolean isOdd) {
+        return noMoreThanOneOddLetter(isOdd, ((asArray.length % 2) == 0));
     }
 
 

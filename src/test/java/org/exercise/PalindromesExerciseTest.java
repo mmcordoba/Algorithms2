@@ -1,6 +1,5 @@
 package org.exercise;
 
-import org.exerrcise.PalindromesExercise;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -26,7 +25,7 @@ public class PalindromesExerciseTest {
     }
 
     @Test
-    public void TheseAreNotPalindromes() {
+    public void theseAreNotPalindromes() {
 
         String[] res = palindromesExercise.palindromize(new String[]{"aaabbb", "ac"});
         Assert.assertEquals("-1", res[0]);

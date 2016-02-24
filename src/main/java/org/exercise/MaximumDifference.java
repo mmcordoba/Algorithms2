@@ -1,4 +1,4 @@
-package org.exerrcise;
+package org.exercise;
 
 public class MaximumDifference {
 

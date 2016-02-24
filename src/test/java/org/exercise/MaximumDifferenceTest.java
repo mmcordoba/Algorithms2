@@ -1,6 +1,5 @@
 package org.exercise;
 
-import org.exerrcise.MaximumDifference;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

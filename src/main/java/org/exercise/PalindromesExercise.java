@@ -1,4 +1,4 @@
-package org.exerrcise;
+package org.exercise;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -42,7 +42,7 @@ public class PalindromesExercise {
 
                     boolean isOdd = (actualCount % 2) != 0;
                     // if there is an odd and size is not odd then palindrome is not possible;
-                    noPossible = oddLenghtCanNotHaveOddLetter(asArray, isOdd);
+                    noPossible = evenLengthCanNotHaveOddLetter(asArray, isOdd);
                     // if there are more than one odd the palindrome is not possible
                     noPossible = noMoreThanOneOddLetter(containsOdd, isOdd);
 
@@ -68,7 +68,7 @@ public class PalindromesExercise {
                     boolean isOdd = (actualCount % 2) != 0;
 
                     // if there is an odd and size is not odd then palindrome is not possible;
-                    noPossible = oddLenghtCanNotHaveOddLetter(asArray, isOdd);
+                    noPossible = evenLengthCanNotHaveOddLetter(asArray, isOdd);
                     // if there are more than one odd the palindrome is not possible
                     noPossible = noMoreThanOneOddLetter(containsOdd, isOdd);
                     if (noPossible) {
@@ -112,7 +112,6 @@ public class PalindromesExercise {
             }
 
         }
-
         // The rest
         for (Map.Entry<String, Integer> entry : container.entrySet()) {
             // we skip the odd character
@@ -129,7 +128,7 @@ public class PalindromesExercise {
         return isOdd && containsOdd;
     }
 
-    private boolean oddLenghtCanNotHaveOddLetter(char[] asArray, boolean isOdd) {
+    private boolean evenLengthCanNotHaveOddLetter(char[] asArray, boolean isOdd) {
         return noMoreThanOneOddLetter(isOdd, ((asArray.length % 2) == 0));
     }
 

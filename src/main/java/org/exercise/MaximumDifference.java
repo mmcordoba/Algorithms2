@@ -6,15 +6,13 @@ public class MaximumDifference {
 
     public int maximumDifference(Integer[] input) {
         int max = 0;
-        for (int i = 0 ; i < input.length; i++) {
+        for (int i = 0, j =1 ; j < input.length; j++) {
 
-            for (int k = i + 1; k < input.length; k++) {
-                if (input[k] - input[i] > max) {
-                    max = input[k] - input[i];
-                }
-                if (input[k] < input[i]) {
-                    i = k;
-                }
+            if (input[j] - input[i] > max) {
+                max = input[j] - input[i];
+            }
+            if (input[j] < input[i]) {
+                i = j;
             }
         }
 

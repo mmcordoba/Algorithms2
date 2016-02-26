@@ -20,5 +20,7 @@ public class MaximumDifferenceTest {
 
         Assert.assertEquals(28,maximumDifference.maximumDifference(new Integer[]{2,3,2,30,8,1,20}));
 
+        Assert.assertEquals(9,maximumDifference.maximumDifference(new Integer[]{2,4,2,1,10,8,1}));
+
     }
 }
